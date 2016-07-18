@@ -14,4 +14,12 @@ def sort_array_with_zeros_ones(lst):
     print zeros + ones
 
 
-sort_array_with_zeros_ones([0,1,0,1,0,0])
+def sort_array_with_zeros_and_ones(lst):
+
+    count_dict = {}
+    for num in lst:
+        count_dict[num] = count_dict.get(num,0) + 1
+
+    return [0]*count_dict[0] + [1]*count_dict[1]
+
+print sort_array_with_zeros_and_ones([0,1,0,1,0,0])
