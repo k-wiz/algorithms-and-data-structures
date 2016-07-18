@@ -1,12 +1,9 @@
 def letter_capitalize(str): 
 
     words = str.split(" ")
-    print words
     new_str = []
     for word in words:
-        print word
         word = word.replace(word[0], word[0].upper())
-        print word
         new_str.append(word)
 
     return " ".join(new_str)
