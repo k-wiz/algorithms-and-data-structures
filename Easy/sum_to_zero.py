@@ -33,10 +33,8 @@ def sum_to_zero(lst):
     for x in lst:
         for y in lst[1:]:
             if x + y == 0:
-                print True
                 return True
     else:
-        print False
         return False
 
 

@@ -41,12 +41,6 @@ def is_anagram_of_palindrome(word):
     letter_count = {}
     odd_count = 0
 
-    # for char in word:
-    #     if char in letter_count:
-    #         letter_count[char] += 1
-    #     else:
-    #         letter_count[char] = 1
-
     for char in word:
         letter_count[char] = letter_count.get(char, 0) + 1
 
@@ -56,6 +50,7 @@ def is_anagram_of_palindrome(word):
 
     if odd_count > 1:
         return False
+    
     return True
 
 
