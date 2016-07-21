@@ -10,8 +10,6 @@ the parentheses are balanced."""
 # ()(
 
 def balanced_parentheses(str):
-    # add parens to list
-    # pop when there is a set of matching parens()
 
     parens = []
 
@@ -19,19 +17,18 @@ def balanced_parentheses(str):
         if char == '(':
             parens.append(char)
         elif char == ')':
-            if not parens or parens[-1] == ')':
+            if not parens:
                 return False
-            elif parens[-1] == '(':
-                parens.pop()
+            parens.pop()
 
     if parens:
         return False
     return True
 
-balanced_parentheses('(2)')
-balanced_parentheses('(2 + 3))')
-balanced_parentheses('(')
-balanced_parentheses("((((2 + 3) * 5))")
+print balanced_parentheses('(2)')
+print balanced_parentheses('(2 + 3))')
+print balanced_parentheses('(')
+print balanced_parentheses("((((2 + 3) * 5))")
 
 
 

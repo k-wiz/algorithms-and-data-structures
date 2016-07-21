@@ -19,24 +19,26 @@ And if we ask for all numbers, we shouldn't get any repeats::
 
 import random
 
-
 def lucky_numbers(n):
     """Return n unique random numbers from 1-10 (inclusive)."""
-    #create a lst with 1-10.
-    #for i in range 10:
-    #pop a random number from that list.
-    #return new list of random numbers. 
 
-    nums = [1,2,3,4,5,6,7,8,9,10]
+    nums =  range(1,11)
     lucky_num_list = []
 
     for i in range(n):
         num = random.choice(nums)
-
         lucky_num_list.append(num)
         nums.remove(num)
 
     return lucky_num_list
+
+
+
+def lucky_numbers2(n):
+
+    return random.sample(range(1,11), n)
+
+print lucky_numbers2(10)
 
 
 

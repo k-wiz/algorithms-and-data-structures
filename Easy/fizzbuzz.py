@@ -44,7 +44,20 @@ def fizzbuzz():
 
 
 def fizzbuzz2():
-    pass 
+    
+    message = ""
+    for num in range(1,21):
+        if num % 3 == 0:
+            message += "fizz"
+        if num % 5 == 0:
+            message += "buzz"
+        if message:
+            print message
+            message = ""
+        else:
+            print num
+
+
 
 
 if __name__ == '__main__':

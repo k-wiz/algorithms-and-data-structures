@@ -17,41 +17,27 @@ Treat spaces and uppercase letters normally:
     >>> is_palindrome("Racecar")
     False
 """
-#Strategy: 
-
 
 
 def is_palindrome(word):
     """Return True/False if this word is a palindrome."""
+ 
+    reversed_word = word[::-1]
 
-    # SOLUTION 1: 
-    # word_list = []
+    if word_ == reversed_word:
+        return True
+    
+    return False
 
-    # for char in word:
-    #     word_list.append(char)
 
-    # reversed_word_list = word_list[::-1]
 
-    # if word_list == reversed_word_list:
-    #     return True
-    # return False
-
-    # SOLUTION 2: 
-    # reversed_word = ""
-
-    # for char in word:
-    #     reversed_word = char + reversed_word
-
-    # if word == reversed_word:
-    #     return True
-    # return False
-
-    # SOLUTION 3: 
-    #Compare first letter to last letter. 0 to -1, 1 to -2, 
+def is_palindrome2(word):
+    """Return True/False if this word is a palindrome."""
 
     for i in range (len(word) / 2):
         if word[i] != word[-1 - i]:
             return False
+
     return True
 
 

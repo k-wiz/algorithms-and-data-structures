@@ -26,7 +26,7 @@ def pig_latin(phrase):
     """
 
     words = phrase.split(" ")
-    vowels = ['a', 'e', 'i', 'o', 'u']
+    vowels = set(['a', 'e', 'i', 'o', 'u'])
     new_phrase = ""
     
     for word in words: 
@@ -34,7 +34,7 @@ def pig_latin(phrase):
             word = word + 'yay'
         else:
             word = word[1:] + word[0] + 'ay'
-        new_phrase = new_phrase + word + " "
+        new_phrase += word + " "
 
     return new_phrase.rstrip()
 

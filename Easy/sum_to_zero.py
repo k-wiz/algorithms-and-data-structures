@@ -12,16 +12,15 @@
 
 #This solution returns a false positive in lists that include 0! 
 
-# def sum_to_zero(lst):
+def sum_to_zero(lst):
 
-#     set_nums = set(lst)
+    set_nums = set(lst)
 
-#     for num in lst:
-#         if -num in set_nums:
-#             print -num
-#             return True
+    for num in lst:
+        if -num in set_nums:
+            return True
 
-#     return False
+    return False
 
 
 

@@ -22,8 +22,7 @@ It should work if either list is empty::
 def concat_lists(list1, list2):
     """Combine lists."""
 
-    for item in list2:
-        list1.append(item)
+    list1.extend(list2)
 
     return list1
 
